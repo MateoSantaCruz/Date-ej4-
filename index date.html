@@ -1,0 +1,36 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<script>
+
+let hoy = new Date();
+function cantidadDiasAnioNuevo(fecha) {
+    let AnioNuevo = new Date(fecha.getFullYear()+ 1,0,0);
+    let difMilSec = AnioNuevo-fecha;
+    let difDias=Math.ceil(difMilSec/(1000*3600*24));
+	document.write(difDias+" dias restantes para año nuevo.<br>");
+  //  cantidadMesescampeon(fecha);
+}
+function cantidadMesescampeon(fecha){
+    let campeon = new Date(2022,11,18);
+    let difMeses=(fecha.getFullYear()-campeon.getFullYear())*12+(fecha.getMonth()-campeon.getMonth());
+	document.write("Fuimos campeones hace: "+difMeses+" meses.<br>");
+   // cantidadAniosNacimiento(fecha);
+}
+function cantidadAniosNacimiento(fecha){
+    let nacimiento = 2005;
+    let diferencia = fecha.getFullYear()- nacimiento;
+    document.write("anios desde que naci: "+diferencia);
+}        
+cantidadDiasAnioNuevo(hoy);
+cantidadMesescampeon(hoy);
+cantidadAniosNacimiento(hoy);
+
+	</script>
+</body>
+</html>
